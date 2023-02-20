@@ -21,34 +21,34 @@ export function Footer() {
     >
       <Stack direction="column">
         <Wrap spacing={4}>
-            <WrapItem>
-                <Link href="/">
-                    <Button colorScheme="red" borderRightRadius="10">
-                        Home
-                    </Button>
-                </Link>
-            </WrapItem>
-            <WrapItem>
-                <Link href="/">
-                    <Button colorScheme="red" borderRightRadius="10">
-                        Contato
-                    </Button>
-                </Link>
-            </WrapItem>
-            <WrapItem>
-                <Link href="/">
-                    <Button colorScheme="red" borderRightRadius="10">
-                        Funcionarios
-                    </Button>
-                </Link>
-            </WrapItem>
-            <WrapItem>
-                <Link href="/">
-                    <Button colorScheme="red" borderRightRadius="10">
-                        Login
-                    </Button>
-                </Link>
-            </WrapItem>
+          <WrapItem>
+            <Link href="/">
+              <Button colorScheme="red" borderRightRadius="10">
+                Home
+              </Button>
+            </Link>
+          </WrapItem>
+          <WrapItem>
+            <Link href="/">
+              <Button colorScheme="red" borderRightRadius="10">
+                Contato
+              </Button>
+            </Link>
+          </WrapItem>
+          <WrapItem>
+            <Link href="/">
+              <Button colorScheme="red" borderRightRadius="10">
+                Funcionarios
+              </Button>
+            </Link>
+          </WrapItem>
+          <WrapItem>
+            <Link href="/">
+              <Button colorScheme="red" borderRightRadius="10">
+                Login
+              </Button>
+            </Link>
+          </WrapItem>
         </Wrap>
       </Stack>
 
@@ -57,23 +57,23 @@ export function Footer() {
       </Stack>
 
       <Stack direction="column">
-            <Wrap spacing={3}>
-                <WrapItem>
-                    <Link href="/instagram">
-                        <Image src=""></Image>
-                    </Link>
-                </WrapItem>
-                <WrapItem>
-                    <Link href="/facebook">
-                        <Image src=""></Image>
-                    </Link>
-                </WrapItem>
-                <WrapItem>
-                    <Link href="/linkedin">
-                        <Image src=""></Image>
-                    </Link>
-                </WrapItem>
-            </Wrap>
+        <Wrap spacing={3}>
+          <WrapItem>
+            <Link href="/instagram">
+              <Image src=""></Image>
+            </Link>
+          </WrapItem>
+          <WrapItem>
+            <Link href="/facebook">
+              <Image src=""></Image>
+            </Link>
+          </WrapItem>
+          <WrapItem>
+            <Link href="/linkedin">
+              <Image src=""></Image>
+            </Link>
+          </WrapItem>
+        </Wrap>
       </Stack>
     </HStack>
   );

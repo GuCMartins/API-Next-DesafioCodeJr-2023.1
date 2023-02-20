@@ -20,7 +20,7 @@ interface CardProdProps {
 
 export function CardProd({ name, text, preco, image }: CardProdProps) {
   return (
-    <Card maxW="sm" bg='red.700' color='white'>
+    <Card maxW="sm" bg="red.700" color="white">
       <CardBody>
         {/* <Image
       src='/{image}'

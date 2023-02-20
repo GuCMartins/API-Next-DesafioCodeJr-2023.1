@@ -26,9 +26,7 @@ export function CardUser({
   salario,
 }: CardUserProps) {
   return (
-    <Card 
-      p={8}
-    >
+    <Card p={8}>
       <Stack direction="column">
         <Wrap spacing={6}>
           <WrapItem>
@@ -47,19 +45,16 @@ export function CardUser({
             <Text>${salario}</Text>
           </WrapItem>
           <WrapItem>
-            <Stack 
-              direction="column" 
-              justify={'space-between'}
-            >
-              <Link href='/'>
-                  <IconButton aria-label='Visualizar' icon={<SearchIcon />} />
-              </Link> 
-              <Link href='/'>
-                  <IconButton aria-label='Editar' icon={<EditIcon />} />
+            <Stack direction="column" justify={"space-between"}>
+              <Link href="/">
+                <IconButton aria-label="Visualizar" icon={<SearchIcon />} />
               </Link>
-              <Link href='/'>
-                  <IconButton aria-label='Deletar' icon={<DeleteIcon />} />
-              </Link>   
+              <Link href="/">
+                <IconButton aria-label="Editar" icon={<EditIcon />} />
+              </Link>
+              <Link href="/">
+                <IconButton aria-label="Deletar" icon={<DeleteIcon />} />
+              </Link>
             </Stack>
           </WrapItem>
         </Wrap>
