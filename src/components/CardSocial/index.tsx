@@ -2,10 +2,6 @@ import {
   Card,
   Text,
   CardBody,
-  CardFooter,
-  Button,
-  ButtonGroup,
-  Divider,
   Heading,
   Stack,
 } from "@chakra-ui/react";
@@ -19,7 +15,7 @@ interface CardProdProps {
 
 export function CardProd({ title, text, image }: CardProdProps) {
   return (
-    <Card maxW="sm" bg="red.700" color="white">
+    <Card maxW="sm" bg={"#8A1B1B"} color="white">
       <CardBody>
         {/* <Image
         src='/{image}'

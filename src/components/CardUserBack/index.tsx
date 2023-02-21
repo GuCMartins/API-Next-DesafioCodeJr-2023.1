@@ -26,9 +26,9 @@ export function CardUser({
   salario,
 }: CardUserProps) {
   return (
-    <Card p={8}>
+    <Card p={8} bg={"#D9D9D9"}>
       <Stack direction="column">
-        <Wrap spacing={6}>
+        <Wrap spacing={"5%"}>
           <WrapItem>
             <Text>{name}</Text>
           </WrapItem>
