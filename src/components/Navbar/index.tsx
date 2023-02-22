@@ -15,7 +15,10 @@ export function Navbar() {
       as="nav"
       bg="black"
       justify={"space-between"}
-      padding={18}
+      pl={50}
+      pr={50}
+      pt={5}
+      pb={5}
       height="13%"
     >
       <Stack>

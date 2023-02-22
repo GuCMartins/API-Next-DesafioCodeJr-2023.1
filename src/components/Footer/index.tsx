@@ -14,11 +14,12 @@ import React from "react";
 export function Footer() {
   return (
     <HStack
-      as="nav"
+      as="footer"
       bg="black"
-      justify={"space-between"}
       padding={15}
-      height="17%"
+      bottom="0"
+      height="500 px"
+      display="flex"
     >
       <Stack direction="column">
         <Wrap spacing={4}>
