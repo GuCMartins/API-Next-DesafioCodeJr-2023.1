@@ -19,65 +19,66 @@ export function Footer() {
       padding={15}
       bottom="0"
       height="500 px"
-      display="flex"
     >
-      <Stack direction="column">
-        <Wrap spacing={4}>
-          <WrapItem>
-            <Link href="/">
-              <Button colorScheme="red" borderRightRadius="10">
-                Home
-              </Button>
-            </Link>
-          </WrapItem>
-          <WrapItem>
-            <Link href="/">
-              <Button colorScheme="red" borderRightRadius="10">
-                Contato
-              </Button>
-            </Link>
-          </WrapItem>
-          <WrapItem>
-            <Link href="/">
-              <Button colorScheme="red" borderRightRadius="10">
-                Funcionarios
-              </Button>
-            </Link>
-          </WrapItem>
-          <WrapItem>
-            <Link href="/">
-              <Button colorScheme="red" borderRightRadius="10">
-                Login
-              </Button>
-            </Link>
-          </WrapItem>
-        </Wrap>
-      </Stack>
+      <Stack direction="row">
+        <Stack direction="row">
+          <Wrap spacing={4}>
+            <WrapItem>
+              <Link href="/">
+                <Button colorScheme="red" borderRightRadius="10">
+                  Home
+                </Button>
+              </Link>
+            </WrapItem>
+            <WrapItem>
+              <Link href="/">
+                <Button colorScheme="red" borderRightRadius="10">
+                  Contato
+                </Button>
+              </Link>
+            </WrapItem>
+            <WrapItem>
+              <Link href="/">
+                <Button colorScheme="red" borderRightRadius="10">
+                  Funcionarios
+                </Button>
+              </Link>
+            </WrapItem>
+            <WrapItem>
+              <Link href="/">
+                <Button colorScheme="red" borderRightRadius="10">
+                  Login
+                </Button>
+              </Link>
+            </WrapItem>
+          </Wrap>
+        </Stack>
 
-      <Stack>
-        <Text>Colocar a logo+circulo</Text>
-      </Stack>
+        <Stack>
+          <Text>Colocar a logo+circulo</Text>
+        </Stack>
 
-      <Stack direction="column">
-        <Wrap spacing={3}>
-          <WrapItem>
-            <Link href="/instagram">
-              <Image src=""></Image>
-            </Link>
-          </WrapItem>
-          <WrapItem>
-            <Link href="/facebook">
-              <Image src=""></Image>
-            </Link>
-          </WrapItem>
-          <WrapItem>
-            <Link href="/linkedin">
-              <Image src=""></Image>
-            </Link>
-          </WrapItem>
-        </Wrap>
+        <Stack direction="column">
+          <Wrap spacing={3}>
+            <WrapItem>
+              <Link href="/instagram">
+                <Image src=""></Image>
+              </Link>
+            </WrapItem>
+            <WrapItem>
+              <Link href="/facebook">
+                <Image src=""></Image>
+              </Link>
+            </WrapItem>
+            <WrapItem>
+              <Link href="/linkedin">
+                <Image src=""></Image>
+              </Link>
+            </WrapItem>
+          </Wrap>
+        </Stack>
       </Stack>
-      <Divider orientation='horizontal' />  
+      {/* <Divider orientation='horizontal' />  */}
     </HStack>
   );
 }
