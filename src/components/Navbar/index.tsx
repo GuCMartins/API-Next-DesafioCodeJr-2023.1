@@ -4,10 +4,10 @@ import {
   HStack,
   Link,
   Stack,
-  Text,
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
+import NextImage from "next/image";
 
 export function Navbar() {
   return (
@@ -22,7 +22,12 @@ export function Navbar() {
       height="13%"
     >
       <Stack>
-        <Text>Colocar a logo+circulo</Text>
+      <NextImage
+              src={"/img/LogoPreto.jpeg"}
+              alt={"FightOn"}
+              width={"70"}
+              height={"70"}
+            />
       </Stack>
 
       <Stack direction="column">

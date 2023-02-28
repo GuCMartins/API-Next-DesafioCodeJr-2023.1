@@ -20,13 +20,15 @@ interface CardProdProps {
 
 export function CardProd({ name, text, preco, image }: CardProdProps) {
   return (
-    <Card maxW="sm" bg={"#8A1B1B"} color="white">
+    <Card maxW={"12.5 rem"} maxH={"14.4 rem"} bg={"#8A1B1B"} color="white">
       <CardBody>
-        {/* <Image
-      src='/{image}'
-      alt='Green double couch with wooden legs'
-      borderRadius={'10px'}
-    /> */}
+        {/* <Image 
+        maxW={"8.5 rem"}
+        maxH={"7.68 rem"}
+        src='/{image}'
+        alt='Green double couch with wooden legs'
+        borderRadius={'10px'}
+        > */}
         <Stack mt="6" spacing="3">
           <Heading size="md">{name}</Heading>
           <Text>{text}</Text>

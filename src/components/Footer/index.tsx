@@ -5,10 +5,11 @@ import {
   WrapItem,
   Button,
   Text,
-  Image,
   Divider,
+  Heading,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import NextImage from "next/image";
 import React from "react";
 
 export function Footer() {
@@ -19,9 +20,10 @@ export function Footer() {
       padding={15}
       bottom="0"
       height="500 px"
+      direction={"column"}
     >
-      <Stack direction="row">
-        <Stack direction="row">
+      <Stack direction="row" width={"100%"} ml={12}>
+        <Stack direction="row" width={"37%"}>
           <Wrap spacing={4}>
             <WrapItem>
               <Link href="/">
@@ -54,31 +56,61 @@ export function Footer() {
           </Wrap>
         </Stack>
 
-        <Stack>
-          <Text>Colocar a logo+circulo</Text>
+        <Stack width={"20%"}>
+          <Link href="/instagram">
+            <NextImage
+              src={"/img/LogoPreto.jpeg"}
+              alt={"FightOn"}
+              width={"95"}
+              height={"95"}
+            />
+          </Link>
         </Stack>
 
-        <Stack direction="column">
-          <Wrap spacing={3}>
+        <Stack direction="row" width={"40%"}>
+          <Wrap spacing={10}>
             <WrapItem>
               <Link href="/instagram">
-                <Image src=""></Image>
+                <NextImage
+                  src={"/img/InstaLogo.png"}
+                  alt={"Instagram"}
+                  width={"45"}
+                  height={"45"}
+                />
               </Link>
             </WrapItem>
             <WrapItem>
               <Link href="/facebook">
-                <Image src=""></Image>
+                <NextImage
+                  src={"/img/FaceLogo.png"}
+                  alt={"Facebook"}
+                  width={"45"}
+                  height={"45"}
+                />
               </Link>
             </WrapItem>
             <WrapItem>
               <Link href="/linkedin">
-                <Image src=""></Image>
+                <NextImage
+                  src={"/img/LinkedinLogo.png"}
+                  alt={"Linkedin"}
+                  width={"45"}
+                  height={"45"}
+                />
               </Link>
+            </WrapItem>
+            <WrapItem>
+              <Stack bg={"#8A1B1B"} color="white" padding="2" ml={20} borderRadius={5} >
+                <Heading size="md">Telefone:</Heading>
+
+                <Text py="2">
+                  (32) 9 9999-9999
+                </Text>
+              </Stack>
             </WrapItem>
           </Wrap>
         </Stack>
       </Stack>
-      {/* <Divider orientation='horizontal' />  */}
     </HStack>
   );
 }

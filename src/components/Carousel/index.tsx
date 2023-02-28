@@ -43,25 +43,25 @@ export default function CaptionCarousel() {
       title: "Saco de Pancada Troyan 20kg",
       text: "Firmemente fixado ao chão, o saco de pancada Troyan 20kg é ideal para todos treinos. Com um design moderno e um acabamento de qualidade, é um equipamento de treino indispensável para qualquer atleta.",
       image:
-        "produto a ser especificado",
+        "../../public/img/sacoCarrosel.png",
     },
     {
       title: "Bandagem Elastica com Alça para o polegar Venum",
       text: "Proteção para os dedos e polegar, possuindo alta resistência e durabilidade. A bandagem Venum é ideal para treinos de Muay Thai, Boxe, MMA e Kickboxing.",
       image:
-        "produto a ser especificado",
+        "../../public/img/ataduraCarrosel.png",
     },
     {
       title: "Luva de Boxe e Muai Thai Venum",
       text: "Conforto e durabilidade, possuem um design ergonomico e um acabamento de qualidade, podendo ser utilizadas em quaisquer treinos.",
       image:
-        "produto a ser especificado",
+        "../../public/img/luvasCarrosel.png",
     },
     {
       title: "Protetor de Canela e Pé Venum",
       text: "Agilidade e firmeza, possuem um design moderno e um acabamento de qualidade, indispensaveis para todos os momentos de sparring e luta.",
       image:
-        "produto a ser especificado",
+        "../../public/img/canelaCarrosel.png",
     },
   ];
 
