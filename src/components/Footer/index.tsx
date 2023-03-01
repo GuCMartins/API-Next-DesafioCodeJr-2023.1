@@ -19,9 +19,9 @@ export function Footer() {
       bg="black"
       padding={15}
       bottom="0"
-      height="500 px"
+      height={"20%"}
       direction={"column"}
-    >
+    >{/* Adicionar o center no footer */}
       <Stack direction="row" width={"100%"} ml={12}>
         <Stack direction="row" width={"37%"}>
           <Wrap spacing={4}>
@@ -56,13 +56,13 @@ export function Footer() {
           </Wrap>
         </Stack>
 
-        <Stack width={"20%"}>
+        <Stack width={"20%"} pl={"6%"}>
           <Link href="/instagram">
             <NextImage
               src={"/img/LogoPreto.jpeg"}
               alt={"FightOn"}
-              width={"95"}
-              height={"95"}
+              width={"70"}
+              height={"70"}
             />
           </Link>
         </Stack>
@@ -111,6 +111,7 @@ export function Footer() {
           </Wrap>
         </Stack>
       </Stack>
+      {/* <Divider orientation="horizontal" /> */}
     </HStack>
   );
 }

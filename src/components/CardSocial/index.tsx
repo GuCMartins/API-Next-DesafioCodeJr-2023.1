@@ -5,8 +5,10 @@ import {
   Heading,
   Stack,
   Link,
+  Center,
 } from "@chakra-ui/react";
 import React from "react";
+import NextImage from "next/image";
 
 interface CardSocialProps {
   text: string;
@@ -16,19 +18,24 @@ interface CardSocialProps {
 
 export function CardSocial({ text, image,rede }: CardSocialProps) {
   return (
-    <Card maxW="sm" bg={"#8A1B1B"} color="white">
+    <Card maxW={"15%"} bg={"#8A1B1B"} color="white">
         <CardBody>
         <Link href={rede}>
-          {/* <Image
-          src='/{image}'
-          alt='Green double couch with wooden legs'
-          borderRadius={'10px'}
-        /> */}
+        <Center width={"90"} height={"90"}>
+          <NextImage
+            src={image}
+            alt={text}
+            width={"80"}
+            height={"80"}
+          />
+        </Center>
         </Link>
-        <Stack mt="6" spacing="3">
-          <Heading size="md">@fightOn</Heading>
-          <Text>{text}</Text>
-        </Stack>
+        <Center width={"100"} height={"100"}>
+          <Stack spacing="3">
+            <Heading pl={"12%"} size="md">@fightOn</Heading>
+            <Text>{text}</Text>
+          </Stack>
+        </Center>
       </CardBody>
     </Card>
   );

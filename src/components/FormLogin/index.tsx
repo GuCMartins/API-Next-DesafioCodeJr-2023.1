@@ -8,13 +8,19 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import React, { FormEvent } from "react";
+import NextImage from "next/image";
 
-export default function FormLogin() {
+export function FormLogin() {
   return (
-    <Flex width="full" align="center" justifyContent="center" bg={"#8A1B1B"}>
+    <Flex width={"40%"} align="center" justifyContent="center" bg={"#8A1B1B"} m={"7%"} ml={"26%"} /*Adicionar as bordas e o fundo dos inputs */>
       <Box p={2}>
         <Box textAlign="center">
-          <Heading>Colocar aqui a imagem da logo com o circulo</Heading>
+        <NextImage
+              src={"/img/LogoVermelho.jpeg"}
+              alt={"FightOn"}
+              width={"200"}
+              height={"200"}
+            />
         </Box>
         <Box my={4} textAlign="left">
           <form>

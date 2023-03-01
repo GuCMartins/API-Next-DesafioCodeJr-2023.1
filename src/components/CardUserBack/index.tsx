@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-interface CardUserProps {
+interface CardUserBackProps {
   name: string;
   email: string;
   niver: string;
@@ -18,17 +18,17 @@ interface CardUserProps {
   salario: number;
 }
 
-export function CardUser({
+export function CardUserBack({
   name,
   email,
   niver,
   cargo,
   salario,
-}: CardUserProps) {
+}: CardUserBackProps) {
   return (
-    <Card p={8} bg={"#D9D9D9"}>
+    <Card p={8} bg={"#D9D9D9"} m={"5%"} >
       <Stack direction="column">
-        <Wrap spacing={"5%"}>
+        <Wrap spacing={"5%"} align='center' /*arrumar a cor de fundo dessa porra e dos botoes*/>
           <WrapItem>
             <Text>{name}</Text>
           </WrapItem>
@@ -45,7 +45,7 @@ export function CardUser({
             <Text>${salario}</Text>
           </WrapItem>
           <WrapItem>
-            <Stack direction="column" justify={"space-between"}>
+            <Stack direction="row" justify={"space-between"}>
               <Link href="/">
                 <IconButton aria-label="Visualizar" icon={<SearchIcon />} />
               </Link>

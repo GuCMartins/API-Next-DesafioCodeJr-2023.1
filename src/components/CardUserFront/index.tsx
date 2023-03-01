@@ -6,8 +6,9 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
+import NextImage from "next/image";
 
-interface CardUserProps {
+interface CardUserFrontProps {
   name: string;
   email: string;
   niver: string;
@@ -15,27 +16,27 @@ interface CardUserProps {
   image: string;
 }
 
-export function CardUser({ name, email, niver, cargo, image }: CardUserProps) {
+export function CardUserFront({ name, email, niver, cargo, image }: CardUserFrontProps) {
   return (
     <Card
-      direction={{ base: "column", sm: "row" }}
+      m={"2%"}
+      p={"2%"}
+      direction="row"
       overflow="hidden"
       variant="outline"
       bg={"#8A1B1B"}
     >
 
-      <Stack direction="column" >
-        <Wrap spacing={"8%"}>
-          {/*
+      <Stack direction="row">
+        <Wrap align='center' spacing={"8%"} /*Arrumar o tamanho do espaco para distribuir os dados*/>
           <WrapItem> 
-            <Image
-                objectFit='cover'
-                maxW={{ base: '100%', sm: '200px' }}
-                src='https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
-                alt='Caffe Latte'
-              />
+            <NextImage
+              src={image}
+              alt={"FightOn"}
+              width={"70"}
+              height={"70"}
+            />
           </WrapItem>     
-          */}
           <WrapItem>
             <Text>{name}</Text>
           </WrapItem>

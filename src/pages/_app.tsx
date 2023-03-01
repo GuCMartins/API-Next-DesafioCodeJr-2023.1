@@ -5,12 +5,13 @@ import { theme } from '../styles/theme'
 import {Navbar} from '../components/Navbar'
 import {Footer} from '../components/Footer'
 import React from 'react'
+import { FormLogin } from '../components/FormLogin'
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <ChakraProvider resetCSS theme={theme}>
             <Navbar />
-           {/* <Component {...pageProps}/> */}
+            <FormLogin/>
            <Footer/>
         </ChakraProvider>
     )

@@ -8,8 +8,10 @@ import {
   Divider,
   Heading,
   Stack,
+  Center,
 } from "@chakra-ui/react";
 import React from "react";
+import NextImage from "next/image";
 
 interface CardProdProps {
   name: string;
@@ -20,15 +22,16 @@ interface CardProdProps {
 
 export function CardProd({ name, text, preco, image }: CardProdProps) {
   return (
-    <Card maxW={"12.5 rem"} maxH={"14.4 rem"} bg={"#8A1B1B"} color="white">
+    <Card maxW={"20%"} maxH={"25%"} bg={"#8A1B1B"} color="white" margin={"1%"}>
       <CardBody>
-        {/* <Image 
-        maxW={"8.5 rem"}
-        maxH={"7.68 rem"}
-        src='/{image}'
-        alt='Green double couch with wooden legs'
-        borderRadius={'10px'}
-        > */}
+        <Center width={"150"} height={"150"}>
+          <NextImage
+            src={image}
+            alt={text}
+            width={"150"}
+            height={"150"}
+          />
+        </Center>
         <Stack mt="6" spacing="3">
           <Heading size="md">{name}</Heading>
           <Text>{text}</Text>
@@ -39,14 +42,9 @@ export function CardProd({ name, text, preco, image }: CardProdProps) {
       </CardBody>
       <Divider />
       <CardFooter>
-        <ButtonGroup spacing="2">
-          <Button variant="solid" colorScheme="white">
-            Compre Agora
-          </Button>
-          <Button variant="ghost" colorScheme="white">
-            Adicione ao carrinho
-          </Button>
-        </ButtonGroup>
+        <Button variant="ghost" colorScheme="white">
+          Adicione ao carrinho
+        </Button>
       </CardFooter>
     </Card>
   );
