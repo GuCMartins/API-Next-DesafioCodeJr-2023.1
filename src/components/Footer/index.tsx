@@ -59,7 +59,7 @@ export function Footer() {
         <Stack width={"20%"} pl={"6%"}>
           <Link href="/instagram">
             <NextImage
-              src={"/img/LogoPreto.jpeg"}
+              src={"/img/Logo.png"}
               alt={"FightOn"}
               width={"70"}
               height={"70"}

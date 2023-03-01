@@ -12,29 +12,35 @@ import React, { FormEvent } from "react";
 
 export function FormContato() {
   return (
-    <Flex width="full" align="center" justifyContent="center" bg={"#8A1B1B"}>
+    <Flex width="full" align="center" justifyContent="center" bg={"#8A1B1B"} borderRadius={10}>
       <Box p={2}>
         <Box textAlign="center">
-          <Heading>Colocar aqui a imagem da logo com o circulo</Heading>
+          <Heading>Fale Conosco</Heading>
         </Box>
         <Box my={4} textAlign="left">
           <form>
-            <FormControl isRequired>
-              <FormLabel>Insira aqui o seu E-mail</FormLabel>
-              <Input type="email" placeholder="email@fighton.com" size="lg" />
-            </FormControl>
+            <Stack direction="row" width={"100%"}>
+              <FormControl isRequired>
+                <FormLabel>Insira aqui seu nome:</FormLabel>
+                <Input type="text" size="lg" bg={"white"} />
+              </FormControl>
+              <FormControl isRequired mt={6}>
+                <FormLabel>Insira aqui o seu email:</FormLabel>
+                <Input type="email" size="lg" bg={"white"} />
+              </FormControl>
+            </Stack>
             <FormControl isRequired mt={6}>
-              <FormLabel>Insira aqui a sua senha</FormLabel>
-              <Input type="password" placeholder="*******" size="lg" />
+                <FormLabel>Insira aqui a mensagem a ser enviada:</FormLabel>
+                <Input type="text" size="lg" bg={"white"} />
             </FormControl>
-            <Button
+              <Button
               //   variantColor="teal"
               variant="outline"
               type="submit"
               width="full"
               mt={4}
             >
-              Login
+              Enviar
             </Button>
           </form>
         </Box>

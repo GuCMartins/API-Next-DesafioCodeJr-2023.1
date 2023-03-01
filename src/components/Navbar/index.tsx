@@ -23,7 +23,7 @@ export function Navbar() {
     >
       <Stack>
       <NextImage
-              src={"/img/LogoPreto.jpeg"}
+              src={"/img/Logo.png"}
               alt={"FightOn"}
               width={"70"}
               height={"70"}

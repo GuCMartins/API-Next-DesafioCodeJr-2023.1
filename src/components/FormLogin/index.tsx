@@ -12,7 +12,7 @@ import NextImage from "next/image";
 
 export function FormLogin() {
   return (
-    <Flex width={"40%"} align="center" justifyContent="center" bg={"#8A1B1B"} m={"7%"} ml={"26%"} /*Adicionar as bordas e o fundo dos inputs */>
+    <Flex width={"30%"} align="center" justifyContent="center" bg={"#8A1B1B"} m={"7%"} ml={"30%"} mb={"8.2%"} borderRadius={10} /*Adicionar o fundo dos inputs */>
       <Box p={2}>
         <Box textAlign="center">
         <NextImage
@@ -24,16 +24,16 @@ export function FormLogin() {
         </Box>
         <Box my={4} textAlign="left">
           <form>
-            <FormControl isRequired>
-              <FormLabel>Insira aqui o seu E-mail</FormLabel>
-              <Input type="email" placeholder="email@fighton.com" size="lg" />
+            <FormControl isRequired >
+              <FormLabel>Insira aqui o seu E-mail:</FormLabel>
+              <Input type="email" placeholder="email@fighton.com" size="lg" bg={"white"} />
             </FormControl>
             <FormControl isRequired mt={6}>
-              <FormLabel>Insira aqui a sua senha</FormLabel>
-              <Input type="password" placeholder="*******" size="lg" />
+              <FormLabel>Insira aqui a sua senha:</FormLabel>
+              <Input type="password" placeholder="*******" size="lg" bg={"white"} />
             </FormControl>
             <Button
-              //   variantColor="teal"
+              bg={"white"}
               variant="outline"
               type="submit"
               width="full"
