@@ -33,7 +33,4 @@ export default function App({ Component, pageProps }: AppProps) {
            <Footer/>
         </ChakraProvider>
     )
-    //https://www.youtube.com/watch?v=xCVC09ZeGjc&list=PL8YNlUoOZkkY-Zj0uWwzlZj58dlBwQSlQ&index=4
-    //https://www.youtube.com/watch?v=AksKa-4yluc&list=PL8YNlUoOZkkY-Zj0uWwzlZj58dlBwQSlQ&index=4
-    //usar pra terminar o carrosel
 }
