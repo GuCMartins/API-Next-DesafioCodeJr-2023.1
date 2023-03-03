@@ -16,11 +16,11 @@ import NextImage from "next/image";
 interface CardProdProps {
   name: string;
   text: string;
-  preco: number;
+  price: number;
   image: string;
 }
 
-export function CardProd({ name, text, preco, image }: CardProdProps) {
+export function CardProd({ name, text, price, image }: CardProdProps) {
   return (
     <Card maxW={"20%"} maxH={"25%"} bg={"#8A1B1B"} color="white" margin={"1%"}>
       <CardBody>
@@ -36,7 +36,7 @@ export function CardProd({ name, text, preco, image }: CardProdProps) {
           <Heading size="md">{name}</Heading>
           <Text>{text}</Text>
           <Text color="white" fontSize="2xl">
-            ${preco}
+            ${price}
           </Text>
         </Stack>
       </CardBody>
