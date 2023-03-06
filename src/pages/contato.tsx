@@ -1,4 +1,4 @@
-import { Center, Stack } from "@chakra-ui/react";
+import { Flex, Stack, VStack } from "@chakra-ui/react";
 import React from "react";
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
@@ -14,18 +14,21 @@ export default function Contato() {
             as="main"
         >
             <Navbar />
-            <Stack >
+            <VStack >
                 <FormContato/>
-                <Stack direction={['column', 'row']}//arrumar as distancias e centralizar essa merda
+                <Flex direction={{ base:'column', lg:'row' }}//arrumar as distancias
                     as="section"
                     align={'center'}
+                    justify={'center'}
+                    width={'100%'}
+                    mt={10}
                 >
-                    <CardSocial text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit."} image={"/img/InstaLogo.png"} rede={"/instagram"}/>
-                    <CardSocial text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit."} image={"/img/FaceLogo.png"} rede={"/facebook"}/>
-                    <CardSocial text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit."} image={"/img/LinkedinLogo.png"} rede={"/linkedin"}/>
-                </Stack>
+                    <CardSocial text={"Lorem ipsum dolor sit amet."} image={"/img/InstaLogo.png"} rede={"/instagram"}/>
+                    <CardSocial text={"Lorem ipsum dolor sit amet."} image={"/img/FaceLogo.png"} rede={"/facebook"}/>
+                    <CardSocial text={"Lorem ipsum dolor sit amet."} image={"/img/LinkedinLogo.png"} rede={"/linkedin"}/>
+                </Flex>
                 <Map/>
-            </Stack>
+            </VStack>
             <Footer/>
         </Stack>
     )

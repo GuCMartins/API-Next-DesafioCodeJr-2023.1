@@ -3,42 +3,38 @@ import { CardType } from "../CardCarousel/types";
 import { Card } from '../CardCarousel';
 import { Center } from '@chakra-ui/react';
 
-// interface CardSliderProps {
-//     cards: CardType[];
-// }
-
 const cards = [
     {
         image:{
-            url: "",
-            alt:"",
+            url: "/img/canelaCarrosel.png",
+            alt:"Caneleira",
         },
-        title: "Card 1",
-        description: "Description 1",
+        title: "Caneleira",
+        description: "Lorem ipsum dolor sit amet.",
     },
     {
         image:{
-            url: "",
-            alt:"",
+            url: "ataduraCarrosel.png",
+            alt:"Ataduras",
         },
-        title: "Card 1",
-        description: "Description 1",
+        title: "Ataduras",
+        description: "Lorem ipsum dolor sit amet.",
     },
     {
         image:{
-            url: "",
-            alt:"",
+            url: "sacoCarrosel.png",
+            alt:"Saco de Pancada",
         },
-        title: "Card 1",
-        description: "Description 1",
+        title: "Saco de Pancada",
+        description: "Lorem ipsum dolor sit amet.",
     },
     {
         image:{
-            url: "",
-            alt:"",
+            url: "/img/luvasCarrosel.png",
+            alt:"Luvas de Boxe",
         },
-        title: "Card 1",
-        description: "Description 1",
+        title: "Luvas de Boxe",
+        description: "Lorem ipsum dolor sit amet.",
     },
 ];
 

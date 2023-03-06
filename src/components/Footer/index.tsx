@@ -21,7 +21,7 @@ export function Footer() {
       bottom="0"
       height={"20%"}
       direction={"column"}
-    >{/* Adicionar o center no footer */}
+    >
       <Stack direction="row" width={"100%"} ml={12}>
         <Stack direction="row" width={"37%"}>
           <Wrap spacing={4}>
@@ -33,21 +33,21 @@ export function Footer() {
               </Link>
             </WrapItem>
             <WrapItem>
-              <Link href="/">
+              <Link href="/contato">
                 <Button colorScheme="red" borderRightRadius="10">
                   Contato
                 </Button>
               </Link>
             </WrapItem>
             <WrapItem>
-              <Link href="/">
+              <Link href="/funcionarios">
                 <Button colorScheme="red" borderRightRadius="10">
                   Funcionarios
                 </Button>
               </Link>
             </WrapItem>
             <WrapItem>
-              <Link href="/">
+              <Link href="/login">
                 <Button colorScheme="red" borderRightRadius="10">
                   Login
                 </Button>

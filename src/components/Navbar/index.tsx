@@ -54,7 +54,7 @@ export function Navbar() {
             </Link>
           </WrapItem>
           <WrapItem>
-            <Link href="/">
+            <Link href="/login">
               <Button colorScheme="red" borderRightRadius="10">
                 Login
               </Button>

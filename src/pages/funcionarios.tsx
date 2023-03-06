@@ -10,10 +10,13 @@ import { useEffect } from "react";
 
 export default function funcionarios() {
     const [funcionarios, setFuncionarios] = useState([])
-    useEffect(()=>{
-        setFuncionarios(['aklsjdalskjdlsak'])
-        console.log(funcionarios)
-    },[])
+    useEffect(() => {
+        fetch('..api.json')
+          .then(response => response.json())
+          .then(data => setFuncionarios(data))
+          .catch(error => console.log(error));
+      }, []);
+
 
     return (
         <Stack>

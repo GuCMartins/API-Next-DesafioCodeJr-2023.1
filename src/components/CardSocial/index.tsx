@@ -18,7 +18,7 @@ interface CardSocialProps {
 
 export function CardSocial({ text, image,rede }: CardSocialProps) {
   return (
-    <Card maxW={"15%"} bg={"#8A1B1B"} color="white" m={10}>
+    <Card maxW={"15%"} bg={"#8A1B1B"} color="white" ml={5} mr={5}>
         <CardBody>
         <Link href={rede}>
         <Center width={"90"} height={"90"}>
