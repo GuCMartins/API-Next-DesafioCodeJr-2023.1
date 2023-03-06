@@ -1,23 +1,16 @@
-import { HStack, Stack } from "@chakra-ui/react";
+import { HStack, Stack, Text } from "@chakra-ui/react";
 import React from "react";
+import { Footer } from "../components/Footer";
+import { Navbar } from "../components/Navbar";
 
 
 
 export default function Home() {
     return (
-        <HStack
-            as="main"
-        >
-            <Stack
-                as="section"
-            >
-
-            </Stack>
-            <Stack
-                as="section"
-            >
-
-            </Stack>
-        </HStack>
+        <Stack>
+            <Navbar /> 
+            
+            <Footer/> 
+        </Stack> 
     )
 }

@@ -12,7 +12,7 @@ import React, { FormEvent } from "react";
 
 export function FormContato() {
   return (
-    <Flex width="full" align="center" justifyContent="center" bg={"#8A1B1B"} borderRadius={10}>
+    <Flex width={"50%"} align="center" justifyContent="center" bg={"#8A1B1B"} borderRadius={10}>
       <Box p={2}>
         <Box textAlign="center">
           <Heading>Fale Conosco</Heading>

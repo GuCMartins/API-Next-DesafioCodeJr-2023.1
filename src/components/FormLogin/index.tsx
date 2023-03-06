@@ -12,7 +12,7 @@ import NextImage from "next/image";
 
 export function FormLogin() {
   return (
-    <Flex width={"30%"} align="center" justifyContent="center" bg={"#8A1B1B"} m={"7%"} ml={"30%"} mb={"8.2%"} borderRadius={10} /*Adicionar o fundo dos inputs */>
+    <Flex width={"30%"} align="center" justifyContent="center" bg={"#8A1B1B"} borderRadius={10} mt='10%' /*Adicionar o fundo dos inputs */>
       <Box p={2}>
         <Box textAlign="center">
         <NextImage

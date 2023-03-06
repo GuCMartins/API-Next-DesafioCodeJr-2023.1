@@ -40,14 +40,14 @@ export function Navbar() {
             </Link>
           </WrapItem>
           <WrapItem>
-            <Link href="/">
+            <Link href="/contato">
               <Button colorScheme="red" borderRightRadius="10">
                 Contato
               </Button>
             </Link>
           </WrapItem>
           <WrapItem>
-            <Link href="/">
+            <Link href="/funcionarios">
               <Button colorScheme="red" borderRightRadius="10">
                 Funcionarios
               </Button>

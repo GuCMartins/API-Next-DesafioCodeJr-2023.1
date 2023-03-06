@@ -5,32 +5,12 @@ import { theme } from '../styles/theme'
 import {Navbar} from '../components/Navbar'
 import {Footer} from '../components/Footer'
 import React from 'react'
-import { Slider, SliderProps, Slide} from '../components/Slider'
 
-export default function App({ Component, pageProps }: AppProps) {
-
-    const settings: SliderProps = {
-       spaceBetween: 50,
-        slidesPerView: 2,
-        navigation:true,
-        pagination: {clickable:true}, 
-    }
+export default function App({ Component, pageProps }) {
 
     return (
         <ChakraProvider resetCSS theme={theme}>
-            <Navbar />
-            <Slider settings={settings} >
-                <Slide>
-                    <h1>Slide 1</h1>
-                </Slide>
-                <Slide>
-                    <h1>Slide 2</h1>
-                </Slide>
-                <Slide>
-                    <h1>Slide 3</h1>
-                </Slide>
-            </Slider>
-           <Footer/>
+            <Component {...pageProps} />
         </ChakraProvider>
     )
 }
