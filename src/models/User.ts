@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const userSchema = new mongoose.Schema({
     name: { Type: String, required: true },
     email: { Type: String, required: true, unique: true },
-    niver: { Type: String, required: true },
+    aniversario: { Type: String, required: true },
     image: { Type: String, required: true },
     cargo: { Type: String, required: true },
     salario: { Type: Number, required: true },
@@ -21,7 +21,7 @@ export default User;
 export interface iUser {
     name: string;
     email: string;
-    niver: string;
+    aniversario: string;
     image: string;
     cargo: string;
     salario: number;

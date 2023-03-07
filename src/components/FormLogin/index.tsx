@@ -26,11 +26,11 @@ export function FormLogin() {
           <form>
             <FormControl isRequired >
               <FormLabel>Insira aqui o seu E-mail:</FormLabel>
-              <Input type="email" placeholder="email@fighton.com" size="lg" bg={"white"} />
+              <Input type="email" placeholder="email@fighton.com" size="lg" colorScheme="white" />
             </FormControl>
             <FormControl isRequired mt={6}>
               <FormLabel>Insira aqui a sua senha:</FormLabel>
-              <Input type="password" placeholder="*******" size="lg" bg={"white"} />
+              <Input type="password" placeholder="*******" size="lg" colorScheme="white" />
             </FormControl>
             <Button
               bg={"white"}

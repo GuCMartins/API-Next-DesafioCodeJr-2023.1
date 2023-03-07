@@ -7,16 +7,17 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import NextImage from "next/image";
+import data from "../../utils/data";
 
 interface CardUserFrontProps {
   name: string;
   email: string;
-  niver: string;
+  aniversario: string;
   cargo: string;
-  image: string;
+  // image: string;
 }
 
-export function CardUserFront({ name, email, niver, cargo, image }: CardUserFrontProps) {
+export function CardUserFront({ name, email, aniversario, cargo, /*image*/ }: CardUserFrontProps) {
   return (
     <Card
       m={"2%"}
@@ -28,15 +29,7 @@ export function CardUserFront({ name, email, niver, cargo, image }: CardUserFron
     >
 
       <Stack direction="row">
-        <Wrap align='center' spacing={"8%"} /*Arrumar o tamanho do espaco para distribuir os dados*/>
-          <WrapItem> 
-            <NextImage
-              src={image}
-              alt={"FightOn"}
-              width={"70"}
-              height={"70"}
-            />
-          </WrapItem>     
+        <Wrap align='center' spacing={"8%"} /*Arrumar o tamanho do espaco para distribuir os dados*/>  
           <WrapItem>
             <Text>{name}</Text>
           </WrapItem>
@@ -44,7 +37,7 @@ export function CardUserFront({ name, email, niver, cargo, image }: CardUserFron
             <Text>{email}</Text>
           </WrapItem>
           <WrapItem>
-            <Text>{niver}</Text>
+            <Text>{aniversario}</Text>
           </WrapItem>
           <WrapItem>
             <Text>{cargo}</Text>

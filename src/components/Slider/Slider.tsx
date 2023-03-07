@@ -1,12 +1,12 @@
+import {ReactNode} from 'react';
 import { Swiper,SwiperProps } from 'swiper/react';
 import {Navigation,Pagination,A11y} from 'swiper';
-import {ReactNode} from 'react';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/A11y';
-import './Slider.css'
+// import 'swiper/css/A11y';
+// import './Slider.css'
 
 interface SliderProps{
     settings: SwiperProps;

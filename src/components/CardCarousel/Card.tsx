@@ -2,17 +2,19 @@ import { Flex, Image, VStack, Text, Heading } from "@chakra-ui/react";
 import { CardType } from "./types";
 
 interface CardProps {
-    card: CardType;
+    image: string;
+    alt:string;
+    title: string;
+    description:string;
 }
 
-export function Card({card}: CardProps){
-    const {image, title, description} = card;
+export function Card({image,alt,title,description}: CardProps){
     
     return(
-        <Flex maxWidth={"20%"} maxH={"25%"} borderRadius={10} bgColor="white">
-            <Image src={image.url} alt={image.alt} objectFit="cover" borderLeftRadius={2}/>
-            <VStack p={1} spacing="10px" align="flex-start" maxW={"10%"} minW={"5%"}> 
-                <Text>Promocao</Text>
+        <Flex maxWidth={"60%"} maxH={"60%"} borderRadius={10} bg="black">
+            <Image src={image} alt={alt} objectFit="cover" borderLeftRadius={10} maxW={280} maxH={250}/>
+            <VStack p={1} spacing="10px" align="flex-start" borderRadius={10} bg={"#8A1B1B"}> 
+                <Text>Promoção</Text>
                 <Heading size="lg">{title}</Heading>
                 <Text overflowY="auto">{description}</Text>
             </VStack>    

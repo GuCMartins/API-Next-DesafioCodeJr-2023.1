@@ -4,6 +4,8 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from '../styles/theme'
 import React from 'react'
 
+import '../components/Slider/Slider.css'
+
 export default function App({ Component, pageProps }) {
 
     return (
