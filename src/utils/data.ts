@@ -2,7 +2,7 @@ const data = {
     usuarios: [
         {
             id : 1,
-            name : "Ana Beatriz Lana",
+            name : "Ana Beatriz",
             email : "ana.armond@codejr.com.br",
             salario : 2000.00,
             aniversario : "06/10",
@@ -18,7 +18,7 @@ const data = {
         },
         {
             id : 3,
-            name : "Bernardo Dantas Ortiz",
+            name : "Bernardo Dantas",
             email : "bernardo.ortiz@codejr.com.br",
             salario : 2000.00,
             aniversario : "01/28",
@@ -90,7 +90,7 @@ const data = {
         },
         {
             id : 12,
-            name : "Gustavo Coelho Martins",
+            name : "Gustavo Martins",
             email : "gustavo.martins@codejr.com.br",
             salario : 1000.00,
             aniversario : "12/08",
@@ -98,7 +98,7 @@ const data = {
         },
         {
             id : 13,
-            name : "Gustavo Vieira Ribeiro",
+            name : "Gustavo Vieira",
             email : "gustavo.ribeiro@codejr.com.br",
             salario : 4000.00,
             aniversario : "06/11",
@@ -138,7 +138,7 @@ const data = {
         },
         {
             id : 18,
-            name : "João Pedro Ferreira (Cascata)",
+            name : "João Pedro Ferreira",
             email : "joao.ferreira@codejr.com.br",
             salario : 6000.00,
             aniversario : "06/26",
@@ -154,7 +154,7 @@ const data = {
         },
         {
             id : 20,
-            name : "Kayan Martins de Freitas",
+            name : "Kayan Martins",
             email : "kayan.freitas@codejr.com.br",
             salario : 1000.00,
             aniversario : "05/21",
@@ -162,7 +162,7 @@ const data = {
         },
         {
             id : 21,
-            name : "Kleiton Ewerton de Oliveira",
+            name : "Kleiton Ewerton",
             email : "kleiton.ewerton@codejr.com.br",
             salario : 1000.00,
             aniversario : "07/06",
@@ -170,19 +170,11 @@ const data = {
         },
         {
             id : 22,
-            name : "Lucas de Oliveira Varino",
+            name : "Lucas Varino",
             email : "lucas.varino@codejr.com.br",
             salario : 4000.00,
             aniversario : "01/15",
             cargo: "gerente"
-        },
-        {
-            id : 23,
-            name : "Lucas Henrique de Araújo",
-            email : "lucas.araujo@codejr.com.br",
-            salario : 1000.00,
-            aniversario : "11/11",
-            cargo: "vendedor"
         },
         {
             id : 24,
@@ -218,7 +210,7 @@ const data = {
         },
         {
             id : 28,
-            name : "Mateus Leal Costa",
+            name : "Mateus Leal",
             email : "matheus.leal@codejr.com.br",
             salario : 1000.00,
             aniversario : "11/21",
@@ -226,7 +218,7 @@ const data = {
         },
         {
             id : 29,
-            name : "Pedro do Couto Filgueiras",
+            name : "Pedro do Couto",
             email : "pedro.couto@codejr.com.br",
             salario : 1000.00,
             aniversario : "03/15",
@@ -234,7 +226,7 @@ const data = {
         },
         {
             id : 30,
-            name : "Pedro Grimaldi Hansel",
+            name : "Pedro Grimaldi",
             email : "pedro.grimaldi@codejr.com.br",
             salario : 1000.00,
             aniversario : "06/13",
@@ -242,7 +234,7 @@ const data = {
         },
         {
             id : 31,
-            name : "Rafael de Oliveira Zimbrão",
+            name : "Rafael Zimbrão",
             email : "rafael.zimbrao@codejr.com.br",
             salario : 1000.00,
             aniversario : "06/22",

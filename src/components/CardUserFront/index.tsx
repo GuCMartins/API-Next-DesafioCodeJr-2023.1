@@ -4,6 +4,7 @@ import {
   Wrap,
   WrapItem,
   Text,
+  Flex,
 } from "@chakra-ui/react";
 import React from "react";
 import NextImage from "next/image";
@@ -17,19 +18,22 @@ interface CardUserFrontProps {
   // image: string;
 }
 
-export function CardUserFront({ name, email, aniversario, cargo, /*image*/ }: CardUserFrontProps) {
+export function CardUserFront({ name, email, aniversario, cargo /*image*/ }: CardUserFrontProps) {
   return (
     <Card
       m={"2%"}
       p={"2%"}
+      pl={"9%"}
+      pr={"2%"}
       direction="row"
       overflow="hidden"
       variant="outline"
       bg={"#8A1B1B"}
+      width={"100%"}
     >
 
-      <Stack direction="row">
-        <Wrap align='center' spacing={"8%"} /*Arrumar o tamanho do espaco para distribuir os dados*/>  
+      <Flex direction="row">
+        <Wrap width={"100%"} spacing={24} /*Arrumar o tamanho do espaco para distribuir os dados*/>  
           <WrapItem>
             <Text>{name}</Text>
           </WrapItem>
@@ -43,7 +47,7 @@ export function CardUserFront({ name, email, aniversario, cargo, /*image*/ }: Ca
             <Text>{cargo}</Text>
           </WrapItem>
         </Wrap>
-      </Stack>
+      </Flex>
     </Card>
   );
 }

@@ -20,7 +20,7 @@ export default function Home() {
     <Stack>
       <Navbar />
       <VStack align={"flex-end"} direction={{ base: "column", lg: "row" }}>
-        <Box maxW="900px" mr={40}>
+        <Box maxW="800px" mr={20}>
           <Slider settings={settings}>
             <SwiperSlide>
               <Card image={'/img/ataduraCarrosel.png'} alt={'atadura'} title={'atadura'} description={'Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.'}/>
@@ -36,7 +36,7 @@ export default function Home() {
             </SwiperSlide>
           </Slider>
         </Box>
-        <Box bg={"black"} width={"45%"} p={4} borderRadius={10} m={20}>
+        <Box bg={"black"} width={"45%"} p={4} borderRadius={10}>
           <Text>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -47,7 +47,7 @@ export default function Home() {
             culpa qui officia deserunt mollit anim id est laborum
           </Text>
         </Box>
-        <Flex>
+        <Flex >
           <CardProd
             name={"Dobok Canelado"}
             text={"Lorem ipsum dolor sit amet."}
@@ -61,7 +61,7 @@ export default function Home() {
             image={"/img/berimbau.webp"}
           />
           <CardProd
-            name={"Wing Chun"}
+            name={"Wing Chun de madeira"}
             text={"Lorem ipsum dolor sit amet."}
             price={90.9}
             image={"/img/mudjong.webp"}
