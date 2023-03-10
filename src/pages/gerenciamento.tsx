@@ -1,9 +1,9 @@
 import {
   VStack,
+  HStack,
   Stack,
   Center,
   Divider,
-  Text,
   Grid,
   GridItem,
   Button,
@@ -31,31 +31,33 @@ export default function Funcionarios() {
   return (
     <Stack>
       <Center>
-        <VStack width={"70%"}>
-          <Link href="/">
-            <Button colorScheme="red" borderRightRadius="10">
-              Sair
-            </Button>
-          </Link>
-          <ModalAdicao />
-          <Grid templateColumns="repeat(6, 1fr)" gap={5}>
-            <GridItem w="100%" h="10" area={"ID"}>
-              ID
+        <VStack width={"80%"}>
+          <HStack justify={"space-between"}>
+            <Link href="/">
+              <Button colorScheme="red" borderRightRadius="10">
+                Sair
+              </Button>
+            </Link>
+            <ModalAdicao />
+          </HStack>
+          <Grid fontWeight='bold' templateColumns="repeat(7, 1fr)" gap={"1%"} width={"100%"}>
+            <GridItem w="100%" h="10" p={2} >
+              <Center>Id</Center>
             </GridItem>
-            <GridItem w="100%" h="10" area={"Nome"}>
-              Nome
+            <GridItem w="100%" h="10" p={2}>
+              <Center>Nome</Center>
             </GridItem>
-            <GridItem w="100%" h="10" area={"E-mail"}>
-              E-mail
+            <GridItem w="100%" h="10" p={2}>
+              <Center>Email</Center>
             </GridItem>
-            <GridItem w="100%" h="10" area={"Aniversario"}>
-              Aniversário
+            <GridItem w="100%" h="10" p={2}>
+              <Center>Aniversario</Center>
             </GridItem>
-            <GridItem w="100%" h="10" area={"salario"}>
-              Salario
+            <GridItem w="100%" h="10" p={2}>
+              <Center>Cargo</Center>
             </GridItem>
-            <GridItem w="100%" h="10" area={"Cargo"}>
-              Cargo
+            <GridItem w="100%" h="10" p={2}>
+              <Center>Salario</Center>
             </GridItem>
           </Grid>
           <Divider orientation="horizontal" />

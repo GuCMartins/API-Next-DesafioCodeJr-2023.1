@@ -1,5 +1,6 @@
 import {
   Button,
+  Center,
   FormControl,
   FormLabel,
   Input,
@@ -10,6 +11,7 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
+  Stack,
   Textarea,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -36,7 +38,7 @@ export default function ModalExclusao({ idfuncionario }) {
 
   return (
     <>
-      <Button mt={4} onClick={onOpen}>
+      <Button m={1} onClick={onOpen}>
         <DeleteIcon />
       </Button>
       <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
@@ -45,18 +47,22 @@ export default function ModalExclusao({ idfuncionario }) {
           <ModalHeader>Confirmação de Exclusao</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-          <Textarea
-                value={"Realmente deseja excluir este funcionario?"}
-                size='sm'
-              />
+            <Textarea
+              value={"Realmente deseja excluir este funcionario?"}
+              size="sm"
+            />
           </ModalBody>
           <ModalFooter>
-            <Button mt={4} colorScheme="teal" onClick={handlerSubmit}>
-              Deletar
-            </Button>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
+            <Stack direction="row" justify={"space-between"}>
+              <Center>
+                <Button m={1} colorScheme="red" onClick={handlerSubmit}>
+                  Deletar
+                </Button>
+                <Button colorScheme="blue" onClick={onClose}>
+                  Close
+                </Button>
+              </Center>
+            </Stack>
           </ModalFooter>
         </ModalContent>
       </Modal>

@@ -3,6 +3,7 @@ import {
   Flex,
   Grid,
   GridItem,
+  Center
 } from "@chakra-ui/react";
 import React from "react";
 import NextImage from "next/image";
@@ -35,23 +36,23 @@ export function CardUserFront({
       width={"100%"}
     >
       <Flex direction="row">
-        <Grid templateColumns="repeat(5, 1fr)" gap={6}>
-          <GridItem w="100%" h="10" area={"foto"}>
-            <NextImage src={"/img/user.jpg"} alt={name} width={"80"} height={"80"} />
-          </GridItem>
-          <GridItem w="100%" h="10" area={"Nome"}>
-            {name}
-          </GridItem>
-          <GridItem w="100%" h="10" area={"E-mail"}>
-            {email}
-          </GridItem>
-          <GridItem w="100%" h="10" area={"Aniversario"}>
-            {aniversario}
-          </GridItem>
-          <GridItem w="100%" h="10" area={"Cargo"}>
-            {cargo}
-          </GridItem>
-        </Grid>
+        <Grid templateColumns="repeat(5, 1fr)" gap={"1%"}>
+            <GridItem w="100%" h="10" pr={20}>
+              <Center><NextImage src={"/img/user.jpg"} alt={name} width={"45"} height={"45"} /></Center>
+            </GridItem>
+            <GridItem w="100%" h="10" pr={10}>
+              <Center>{name}</Center>
+            </GridItem>
+            <GridItem w="100%" h="10" pr={5}>
+              <Center>{email}</Center>
+            </GridItem>
+            <GridItem w="100%" h="10" pr={10}>
+              <Center>{aniversario}</Center>
+            </GridItem>
+            <GridItem w="100%" h="10">
+              <Center>{cargo}</Center>
+            </GridItem>
+          </Grid>
       </Flex>
     </Card>
   );

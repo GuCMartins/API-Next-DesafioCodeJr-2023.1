@@ -9,6 +9,7 @@ import {
   IconButton,
   Grid,
   GridItem,
+  Center,
 } from "@chakra-ui/react";
 import React from "react";
 import ModalEdicao from "../ModalEdicao";
@@ -36,30 +37,34 @@ export function CardUserBack({
     <Card p={8} bg={"#D9D9D9"} m={"5%"}>
       <Stack direction="column">
         <Grid templateColumns="repeat(7, 1fr)" gap={5}>
-          <GridItem w="100%" h="10" area={"ID"}>
-            {id}
+          <GridItem w="100%" h="10" pr={10}>
+            <Center>{id}</Center>
           </GridItem>
-          <GridItem w="100%" h="10" area={"Nome"}>
-            {name}
+          <GridItem w="100%" h="10" pr={10}>
+            <Center>{name}</Center>
           </GridItem>
-          <GridItem w="100%" h="10" area={"E-mail"}>
-            {email}
+          <GridItem w="100%" h="10" pr={5}>
+            <Center>{email}</Center>
           </GridItem>
-          <GridItem w="100%" h="10" area={"Aniversario"}>
-            {aniversario}
+          <GridItem w="100%" h="10" pr={10}>
+            <Center>{aniversario}</Center>
           </GridItem>
-          <GridItem w="100%" h="10" area={"salario"}>
-            {salario}
+          <GridItem w="100%" h="10">
+            <Center>{cargo}</Center>
           </GridItem>
-          <GridItem w="100%" h="10" area={"Cargo"}>
-            {cargo}
+          <GridItem w="100%" h="10" pr={10}>
+            <Center>R$ {salario}</Center>
           </GridItem>
+          <GridItem>
+          <Stack direction="row" justify={"space-between"}>
+            <Center>
+              <ModalVisual idfuncionario={id} />
+              <ModalEdicao idfuncionario={id} />
+              <ModalExclusao idfuncionario={id} />
+            </Center>  
+          </Stack>
+        </GridItem>
         </Grid>
-        <Stack direction="row" justify={"space-between"}>
-          <ModalVisual idfuncionario={id} />
-          <ModalEdicao idfuncionario={id} />
-          <ModalExclusao idfuncionario={id} />
-        </Stack>
       </Stack>
     </Card>
   );

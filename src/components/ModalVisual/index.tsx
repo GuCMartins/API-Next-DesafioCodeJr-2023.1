@@ -22,7 +22,7 @@ export default function ModalVisual({ idfuncionario }) {
   const finalRef = React.useRef(null);
 
   const [data, setData] = useState({
-    nome: "",
+    name: "",
     email: "",
     salario: "",
     aniversario: "",
@@ -38,19 +38,19 @@ export default function ModalVisual({ idfuncionario }) {
 }
   return (
     <>
-      <Button mt={4} onClick={fetchData}>
+      <Button m={1}  onClick={fetchData}>
         <InfoOutlineIcon />
       </Button>
       <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Edição</ModalHeader>
+          <ModalHeader>Visualização</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <FormControl>
               <FormLabel htmlFor="nome">Nome:</FormLabel>
               <Textarea
-                value={data.nome}
+                value={data.name}
                 size='sm'
               />
             </FormControl>
@@ -85,7 +85,7 @@ export default function ModalVisual({ idfuncionario }) {
           </ModalBody>
           <ModalFooter>
             <Button colorScheme="blue" mr={3} onClick={() => setIsOpen(false)}>
-              Close
+              Fechar
             </Button>
           </ModalFooter>
         </ModalContent>

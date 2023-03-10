@@ -1,5 +1,6 @@
 import {
   Button,
+  Center,
   FormControl,
   FormLabel,
   Input,
@@ -10,18 +11,23 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
+  Stack,
   useDisclosure,
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { ArrowUpIcon } from "@chakra-ui/icons";
+import { AiFillEdit } from "react-icons/ai";
+import { useRouter } from 'next/router';
 
 export default function ModalEdicao({ idfuncionario }) {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  // const { isOpen, onOpen, onClose } = useDisclosure();
+  const [isOpen, setIsOpen] = useState(false)
   const finalRef = React.useRef(null);
 
+  const router = useRouter();
+
   const [formValues, setFormValues] = useState({
-    nome: "",
+    name: "",
     email: "",
     salario: "",
     aniversario: "",
@@ -32,19 +38,26 @@ export default function ModalEdicao({ idfuncionario }) {
     event.preventDefault();
     axios
       .put(`http://localhost:3001/funcionarios/${idfuncionario}`, {
-        name: formValues.nome,
+        name: formValues.name,
         email: formValues.email,
         salario: formValues.salario,
         aniversario: formValues.aniversario,
         cargo: formValues.cargo,
       })
-      .then((resposta) => {
-        alert("Funcionario editado com sucesso!");
-      })
       .catch((erro) => {
         console.log(erro);
       });
+      setIsOpen(false);
+      router.reload();
   };
+
+  const fetchData = (event) => {
+      event.preventDefault();
+      axios.get(`http://localhost:3001/funcionarios/${idfuncionario}`).then((response) => {
+        setFormValues(response.data);
+        setIsOpen(true);
+    });
+  }
 
   /*
         axios.get(`http://localhost:3001/funcionarios/${idfuncionario}`)
@@ -62,10 +75,10 @@ export default function ModalEdicao({ idfuncionario }) {
 
   return (
     <>
-      <Button mt={4} onClick={onOpen}>
-        <ArrowUpIcon />
+      <Button m={1} onClick={fetchData}>
+        <AiFillEdit />
       </Button>
-      <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
+      <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Edição</ModalHeader>
@@ -75,10 +88,9 @@ export default function ModalEdicao({ idfuncionario }) {
               <FormLabel htmlFor="nome">Nome:</FormLabel>
               <Input
                 id="nome"
-                placeholder="Digite o nome"
-                value={formValues.nome}
+                value={formValues.name}
                 onChange={(event) =>
-                  setFormValues({ ...formValues, nome: event.target.value })
+                  setFormValues({ ...formValues, name: event.target.value })
                 }
               />
             </FormControl>
@@ -110,6 +122,7 @@ export default function ModalEdicao({ idfuncionario }) {
                 id="aniversario"
                 placeholder="Digite seu Aniversario"
                 value={formValues.aniversario}
+                // type="date"
                 onChange={(event) =>
                   setFormValues({
                     ...formValues,
@@ -129,14 +142,30 @@ export default function ModalEdicao({ idfuncionario }) {
                 }
               />
             </FormControl>
+            <FormControl>
+              <FormLabel htmlFor="salario">salario:</FormLabel>
+              <Input
+                id="salario"
+                placeholder="Digite seu salario"
+                value={formValues.salario}
+                type="number"
+                onChange={(event) =>
+                  setFormValues({ ...formValues, salario: event.target.value })
+                }
+              />
+            </FormControl>
           </ModalBody>
           <ModalFooter>
-            <Button mt={4} colorScheme="teal" onClick={handlerSubmit}>
-              Salvar
-            </Button>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
+          <Stack direction="row" justify={"space-between"}>
+            <Center>
+              <Button colorScheme="teal" m={1} onClick={handlerSubmit}>
+                Salvar
+              </Button>
+              <Button colorScheme="blue" onClick={() => setIsOpen(false)}>
+                Fechar
+              </Button>
+            </Center>
+          </Stack>  
           </ModalFooter>
         </ModalContent>
       </Modal>

@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { ArrowUpIcon } from "@chakra-ui/icons";
+import { AddIcon } from "@chakra-ui/icons";
 
 export default function ModalAdicao() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -48,8 +48,8 @@ export default function ModalAdicao() {
 
   return (
     <>
-      <Button mt={4} onClick={onOpen}>
-        <ArrowUpIcon />
+      <Button m={1} onClick={onOpen}>
+        <AddIcon />
       </Button>
       <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
