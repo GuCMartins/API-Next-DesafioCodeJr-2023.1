@@ -1,44 +1,61 @@
-import { HStack,VStack, Stack, Center,Divider,Text } from "@chakra-ui/react";
-import React from "react";
+import { VStack, Stack, Center, Divider, Text, Grid, GridItem } from "@chakra-ui/react";
+import React, { useState, useEffect } from "react";
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
-import {CardUserFront} from '../components/CardUserFront'
-// import { useState } from "react";
-// import { useEffect } from "react";
+import { CardUserFront } from "../components/CardUserFront";
 
-import data from '../utils/data'
+import axios from "axios";
 
 export default function Funcionarios() {
-    // const [funcionarios, setFuncionarios] = useState([])
-    // useEffect(() => {
-    //     fetch('..api.json')
-    //       .then(response => response.json())
-    //       .then(data => setFuncionarios(data))
-    //       .catch(error => console.log(error));
-    //   }, []);
+  const [funcionarios, setFuncionarios] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/funcionarios")
+      .then((resposta) => {
+        setFuncionarios(resposta.data);
+      })
+      .catch((erro) => {
+        console.log(erro);
+      });
+  }, []);
 
-    const users = data.usuarios
-
-    console.log(users)
-
-    return (
-        <Stack>
-            <Navbar /> 
-            <Center>
-                <VStack width={"50%"}>
-                    <HStack spacing={40}>
-                        <Text fontSize="xl" fontWeight="bold" color={"black"}> Nome </Text>
-                        <Text fontSize="xl" fontWeight="bold" color={"black"}> Email </Text>
-                        <Text fontSize="xl" fontWeight="bold" color={"black"}> Aniversário</Text>
-                        <Text fontSize="xl" fontWeight="bold" color={"black"}>  Cargo</Text>
-                    </HStack>
-                    <Divider orientation='horizontal' />
-                    {users.map(user => (
-                        <CardUserFront name={user.name} email={user.email} aniversario={user.aniversario} cargo={user.cargo}/>
-                    ))}
-                </VStack>
-            </Center>
-            <Footer/> 
-        </Stack> 
-    )
+  return (
+    <Stack>
+      <Navbar />
+      <Center>
+        <VStack width={"50%"}>
+          <Grid templateColumns="repeat(5, 1fr)" gap={6}>
+            <GridItem w="100%" h="10" area={'foto'}>
+                Foto
+            </GridItem>
+            <GridItem w="100%" h="10" area={'Nome'}>
+                Nome
+            </GridItem>
+            <GridItem w="100%" h="10" area={'E-mail'}>
+                E-mail
+            </GridItem>
+            <GridItem w="100%" h="10" area={'Aniversario'}>
+                Aniversário
+            </GridItem>
+            <GridItem w="100%" h="10" area={'Cargo'}>
+                Cargo
+            </GridItem>
+          </Grid>
+          <Divider orientation="horizontal" />
+          {funcionarios &&
+            funcionarios.map((funcionario) => (
+              <CardUserFront
+                key={funcionario.id}
+                name={funcionario.name}
+                email={funcionario.email}
+                aniversario={funcionario.aniversario}
+                cargo={funcionario.cargo}
+                id={funcionario.id}
+              />
+            ))}
+        </VStack>
+      </Center>
+      <Footer />
+    </Stack>
+  );
 }

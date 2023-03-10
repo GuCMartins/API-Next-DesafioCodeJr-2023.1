@@ -6,6 +6,7 @@ import {
   Box,
   Flex,
   Heading,
+  Link,
 } from "@chakra-ui/react";
 import React, { FormEvent } from "react";
 import NextImage from "next/image";
@@ -30,17 +31,19 @@ export function FormLogin() {
             </FormControl>
             <FormControl isRequired mt={6}>
               <FormLabel>Insira aqui a sua senha:</FormLabel>
-              <Input type="password" placeholder="*******" size="lg" colorScheme="white" />
+              <Input type="text" placeholder="*******" size="lg" colorScheme="white" />
             </FormControl>
-            <Button
-              bg={"white"}
-              variant="outline"
-              type="submit"
-              width="full"
-              mt={4}
-            >
-              Login
-            </Button>
+            <Link href="/funcionarios">
+              <Button
+                bg={"white"}
+                variant="outline"
+                type="submit"
+                width="full"
+                mt={4}
+              >
+                Login
+              </Button>
+            </Link>
           </form>
         </Box>
       </Box>
