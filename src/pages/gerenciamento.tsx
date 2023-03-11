@@ -11,22 +11,40 @@ import {
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import { CardUserBack } from "../components/CardUserBack";
+import { ArrowRightIcon, ArrowLeftIcon } from "@chakra-ui/icons";
 
 import axios from "axios";
 import ModalAdicao from "../components/ModalAdicao";
 
 export default function Funcionarios() {
   const [funcionarios, setFuncionarios] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [perPage] = useState(11);
+
   useEffect(() => {
     axios
-      .get("http://localhost:3001/funcionarios")
+      .get("http://localhost:3001/funcionarios", {
+        params: {
+          _page: currentPage,
+          _limit: perPage,
+        },
+      })
       .then((resposta) => {
         setFuncionarios(resposta.data);
       })
       .catch((erro) => {
         console.log(erro);
       });
-  }, []);
+  }, [currentPage, perPage]);
+
+  const handlePageClick = (event) => {
+    setCurrentPage(Number(event.target.id));
+  };
+
+  const pageNumbers = [];
+  for (let i = 1; i <= Math.ceil(funcionarios.length / perPage); i++) {
+    pageNumbers.push(i);
+  }
 
   return (
     <Stack>
@@ -40,8 +58,13 @@ export default function Funcionarios() {
             </Link>
             <ModalAdicao />
           </HStack>
-          <Grid fontWeight='bold' templateColumns="repeat(7, 1fr)" gap={"1%"} width={"100%"}>
-            <GridItem w="100%" h="10" p={2} >
+          <Grid
+            fontWeight="bold"
+            templateColumns="repeat(7, 1fr)"
+            gap={"1%"}
+            width={"100%"}
+          >
+            <GridItem w="100%" h="10" p={2}>
               <Center>Id</Center>
             </GridItem>
             <GridItem w="100%" h="10" p={2}>
@@ -73,6 +96,19 @@ export default function Funcionarios() {
                 id={funcionario.id}
               />
             ))}
+          <HStack>
+            <Button onClick={() => setCurrentPage(currentPage - 1)}>
+              <ArrowLeftIcon />
+            </Button>
+            {pageNumbers.map((number) => (
+              <Button key={number} id={number}>
+                {currentPage}
+              </Button>
+            ))}
+            <Button onClick={() => setCurrentPage(currentPage + 1)}>
+              <ArrowRightIcon />
+            </Button>
+          </HStack>
         </VStack>
       </Center>
     </Stack>

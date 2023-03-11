@@ -18,22 +18,18 @@ import {
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { DeleteIcon } from "@chakra-ui/icons";
+import { useRouter } from 'next/router';
 
 export default function ModalExclusao({ idfuncionario }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const finalRef = React.useRef(null);
 
-  const [formValues, setFormValues] = useState({
-    nome: "",
-    email: "",
-    salario: "",
-    aniversario: "",
-    cargo: "",
-  });
+  const router = useRouter();
 
   const handlerSubmit = (event) => {
     event.preventDefault();
     axios.delete(`http://localhost:3001/funcionarios/${idfuncionario}`);
+    router.reload();
   };
 
   return (
@@ -59,7 +55,7 @@ export default function ModalExclusao({ idfuncionario }) {
                   Deletar
                 </Button>
                 <Button colorScheme="blue" onClick={onClose}>
-                  Close
+                  Cancelar
                 </Button>
               </Center>
             </Stack>

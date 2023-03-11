@@ -158,7 +158,7 @@ export default function ModalEdicao({ idfuncionario }) {
           <ModalFooter>
           <Stack direction="row" justify={"space-between"}>
             <Center>
-              <Button colorScheme="teal" m={1} onClick={handlerSubmit}>
+              <Button colorScheme="teal" mr={1} onClick={handlerSubmit}>
                 Salvar
               </Button>
               <Button colorScheme="blue" onClick={() => setIsOpen(false)}>
