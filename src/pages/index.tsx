@@ -28,7 +28,7 @@ export default function Home() {
     <Stack>
       <Navbar />
       <HStack>
-        <Stack ml={"10%"} maxWidth={"50 rem"}>
+        <Stack ml={"10%"} mr={"5%"} maxWidth={"50 rem"}>
           <NextImage
             src={"/img/Logo.png"}
             alt={"FightOn"}
@@ -39,7 +39,6 @@ export default function Home() {
         <VStack
           align={"center"}
           direction={{ base: "column", lg: "row" }}
-          paddingRight={5}
         >
           <HStack maxW="900">
             <Slider settings={settings}>
