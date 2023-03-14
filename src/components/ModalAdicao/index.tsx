@@ -54,7 +54,7 @@ export default function ModalAdicao() {
 
   return (
     <>
-      <Button m={1} onClick={onOpen}>
+      <Button m={1} bg="black" onClick={onOpen}>
         <AddIcon />
       </Button>
       <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>

@@ -75,7 +75,7 @@ export default function ModalEdicao({ idfuncionario }) {
 
   return (
     <>
-      <Button m={1} onClick={fetchData}>
+      <Button m={1} bg="green" onClick={fetchData}>
         <AiFillEdit />
       </Button>
       <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={() => setIsOpen(false)}>

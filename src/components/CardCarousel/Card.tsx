@@ -10,7 +10,7 @@ interface CardProps {
 export function Card({image,alt,title,description}: CardProps){
     
     return(
-        <Flex maxWidth={"80%"} maxH={"80%"} borderRadius={10} bg="black">
+        <Flex maxWidth={"95%"} maxH={"80%"} borderRadius={10} bg="black" mb={6}>
             <Image src={image} alt={alt} objectFit="cover" borderLeftRadius={10} maxW={280} maxH={250}/>
             <VStack p={1} spacing="10px" align="flex-start" borderRadius={10} bg={"#8A1B1B"}> 
                 <Text>Promoção</Text>

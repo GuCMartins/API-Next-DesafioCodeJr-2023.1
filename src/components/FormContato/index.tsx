@@ -22,19 +22,22 @@ export function FormContato() {
             <Stack direction="row" width={"100%"}>
               <FormControl isRequired>
                 <FormLabel>Insira aqui seu nome:</FormLabel>
-                <Input type="text" size="lg" bg={"white"} />
+                <Input type="text" size="lg" bg="white"
+                  color="black" />
               </FormControl>
               <FormControl isRequired mt={6}>
                 <FormLabel>Insira aqui o seu email:</FormLabel>
-                <Input type="email" size="lg" bg={"white"} />
+                <Input type="email" size="lg" bg="white"
+                  color="black" />
               </FormControl>
             </Stack>
             <FormControl isRequired mt={6}>
-                <FormLabel>Insira aqui a mensagem a ser enviada:</FormLabel>
-                <Input type="text" size="lg" bg={"white"} />
+              <FormLabel>Insira aqui a mensagem a ser enviada:</FormLabel>
+              <Input type="text" size="lg" bg="white"
+                color="black" />
             </FormControl>
-              <Button
-              //   variantColor="teal"
+            <Button
+              bg={"black"}
               variant="outline"
               type="submit"
               width="full"

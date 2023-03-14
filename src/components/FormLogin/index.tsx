@@ -36,7 +36,8 @@ export function FormLogin() {
               type="email"
               placeholder="email@fighton.com"
               size="lg"
-              colorScheme="white"
+              bg="white"
+              color="black"
             />
           </FormControl>
           <FormControl isRequired mt={6}>
@@ -45,12 +46,13 @@ export function FormLogin() {
               type="text"
               placeholder="*******"
               size="lg"
-              colorScheme="white"
+              bg="white"
+              color="black"
             />
           </FormControl>
           <Link href="/gerenciamento">
             <Button
-              bg={"white"}
+              bg={"black"}
               variant="outline"
               type="submit"
               width="full"

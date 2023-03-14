@@ -38,7 +38,7 @@ export default function ModalVisual({ idfuncionario }) {
 }
   return (
     <>
-      <Button m={1}  onClick={fetchData}>
+      <Button bg="blue" m={1}  onClick={fetchData}>
         <InfoOutlineIcon />
       </Button>
       <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={() => setIsOpen(false)}>

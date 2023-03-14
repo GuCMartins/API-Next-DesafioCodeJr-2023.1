@@ -35,7 +35,7 @@ export function CardUserFront({
       bg={"#8A1B1B"}
       width={"100%"}
     >
-      <Flex direction="row">
+      <Flex direction="row" color="white">
         <Grid templateColumns="repeat(5, 1fr)" gap={"1%"}>
             <GridItem w="100%" h="10" pr={"80%"}>
               <Center><NextImage src={"/img/user.jpg"} alt={name} width={"45"} height={"45"} /></Center>

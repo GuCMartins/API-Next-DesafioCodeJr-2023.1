@@ -28,8 +28,8 @@ export function CardUserBack({
   id,
 }: CardUserBackProps) {
   return (
-    <Card p={8} bg={"#D9D9D9"} m={"5%"}>
-      <Stack direction="column">
+    <Card p={8} bg={"#8A1B1B"} m={"5%"}>
+      <Stack direction="column" color="white">
         <Grid templateColumns="repeat(7, 1fr)" gap={5}>
           <GridItem w="100%" h="10" pr={10}>
             <Center>{id}</Center>

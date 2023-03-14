@@ -1,5 +1,6 @@
 import { VStack, Flex, Stack, Box, Text, Center, HStack } from "@chakra-ui/react";
 import React from "react";
+import NextImage from "next/image";
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import { Card } from "../components/CardCarousel";
@@ -9,7 +10,7 @@ import { SwiperSlide, SwiperProps } from "swiper/react";
 
 export default function Home() {
   const settings: SwiperProps = {
-    spaceBetween: 0.5,
+    spaceBetween: 0.1,
     slidesPerView: 2,
     navigation: true,
     pagination: { clickable: true },
@@ -18,89 +19,97 @@ export default function Home() {
   return (
     <Stack>
       <Navbar />
-        <VStack align={"flex-end"} direction={{ base: "column", lg: "row" }} mr={20}>
-          <Box maxW="800px" >
-            <Slider settings={settings}>
-              <SwiperSlide>
-                <Card
-                  image={"/img/ataduraCarrosel.png"}
-                  alt={"atadura"}
-                  title={"atadura"}
-                  description={
-                    "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Card
-                  image={"/img/canelaCarrossel.png"}
-                  alt={"canela"}
-                  title={"Caneleira"}
-                  description={
-                    "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Card
-                  image={"/img/luvasCarrosel.png"}
-                  alt={"luvas"}
-                  title={"Luvas"}
-                  description={
-                    "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Card
-                  image={"/img/sacoCarrosel.png"}
-                  alt={"saco"}
-                  title={"Saco Pancada"}
-                  description={
-                    "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
-                  }
-                />
-              </SwiperSlide>
-            </Slider>
-          </Box>
-          <Box bg={"black"} width={"45%"} p={4} borderRadius={10}>
-            <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum
-            </Text>
-          </Box>
-          <Flex ml={"80%"}>
-            <CardProd
-              name={"Dobok Canelado"}
-              text={"Lorem ipsum dolor sit amet."}
-              price={90.9}
-              image={"/img/dobok.png"}
+      <VStack align={"flex-end"} direction={{ base: "column", lg: "row" }}>
+        <HStack maxW="970px" justify={"space-between"} >
+          <Stack>
+            <NextImage
+              src={"/img/Logo.png"}
+              alt={"FightOn"}
+              width={"400"}
+              height={"400"}
             />
-            <CardProd
-              name={"Berimbau Completo"}
-              text={"Lorem ipsum dolor sit amet."}
-              price={90.9}
-              image={"/img/berimbau.webp"}
-            />
-            <CardProd
-              name={"Wing Chun de madeira"}
-              text={"Lorem ipsum dolor sit amet."}
-              price={90.9}
-              image={"/img/mudjong.webp"}
-            />
-            <CardProd
-              name={"Shinai de Bambu"}
-              text={"Lorem ipsum dolor sit amet."}
-              price={90.9}
-              image={"/img/shinai.jpg"}
-            />
-          </Flex>
-        </VStack>
+          </Stack>
+          <Slider settings={settings}>
+            <SwiperSlide>
+              <Card
+                image={"/img/ataduraCarrosel.png"}
+                alt={"atadura"}
+                title={"atadura"}
+                description={
+                  "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
+                }
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Card
+                image={"/img/canelaCarrossel.png"}
+                alt={"canela"}
+                title={"Caneleira"}
+                description={
+                  "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
+                }
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Card
+                image={"/img/luvasCarrosel.png"}
+                alt={"luvas"}
+                title={"Luvas"}
+                description={
+                  "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
+                }
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Card
+                image={"/img/sacoCarrosel.png"}
+                alt={"saco"}
+                title={"Saco Pancada"}
+                description={
+                  "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
+                }
+              />
+            </SwiperSlide>
+          </Slider>
+        </HStack>
+        <Box bg={"black"} width={"65%"} p={4} borderRadius={10} mr={10}>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum
+          </Text>
+        </Box>
+        <Flex ml={"80%"}>
+          <CardProd
+            name={"Dobok Canelado"}
+            text={"Lorem ipsum dolor sit amet."}
+            price={90.9}
+            image={"/img/dobok.png"}
+          />
+          <CardProd
+            name={"Berimbau Completo"}
+            text={"Lorem ipsum dolor sit amet."}
+            price={90.9}
+            image={"/img/berimbau.webp"}
+          />
+          <CardProd
+            name={"Wing Chun de madeira"}
+            text={"Lorem ipsum dolor sit amet."}
+            price={90.9}
+            image={"/img/mudjong.webp"}
+          />
+          <CardProd
+            name={"Shinai de Bambu"}
+            text={"Lorem ipsum dolor sit amet."}
+            price={90.9}
+            image={"/img/shinai.jpg"}
+          />
+        </Flex>
+      </VStack>
       <Footer />
     </Stack>
   );

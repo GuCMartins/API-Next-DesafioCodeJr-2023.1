@@ -34,7 +34,7 @@ export default function ModalExclusao({ idfuncionario }) {
 
   return (
     <>
-      <Button m={1} onClick={onOpen}>
+      <Button m={1} bg="red" onClick={onOpen}>
         <DeleteIcon />
       </Button>
       <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
