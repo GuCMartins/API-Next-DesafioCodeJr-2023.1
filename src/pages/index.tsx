@@ -1,4 +1,12 @@
-import { VStack, Flex, Stack, Box, Text, Center, HStack } from "@chakra-ui/react";
+import {
+  VStack,
+  Flex,
+  Stack,
+  Box,
+  Text,
+  Center,
+  HStack,
+} from "@chakra-ui/react";
 import React from "react";
 import NextImage from "next/image";
 import { Footer } from "../components/Footer";
@@ -19,97 +27,103 @@ export default function Home() {
   return (
     <Stack>
       <Navbar />
-      <VStack align={"flex-end"} direction={{ base: "column", lg: "row" }}>
-        <HStack maxW="970px" justify={"space-between"} >
-          <Stack>
-            <NextImage
-              src={"/img/Logo.png"}
-              alt={"FightOn"}
-              width={"400"}
-              height={"400"}
+      <HStack>
+        <Stack ml={"10%"} maxWidth={"50 rem"}>
+          <NextImage
+            src={"/img/Logo.png"}
+            alt={"FightOn"}
+            width={"1000"}
+            height={"1000"}
+          />
+        </Stack>
+        <VStack
+          align={"center"}
+          direction={{ base: "column", lg: "row" }}
+          paddingRight={5}
+        >
+          <HStack maxW="900">
+            <Slider settings={settings}>
+              <SwiperSlide>
+                <Card
+                  image={"/img/ataduraCarrosel.png"}
+                  alt={"atadura"}
+                  title={"atadura"}
+                  description={
+                    "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
+                  }
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Card
+                  image={"/img/canelaCarrossel.png"}
+                  alt={"canela"}
+                  title={"Caneleira"}
+                  description={
+                    "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
+                  }
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Card
+                  image={"/img/luvasCarrosel.png"}
+                  alt={"luvas"}
+                  title={"Luvas"}
+                  description={
+                    "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
+                  }
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Card
+                  image={"/img/sacoCarrosel.png"}
+                  alt={"saco"}
+                  title={"Saco Pancada"}
+                  description={
+                    "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
+                  }
+                />
+              </SwiperSlide>
+            </Slider>
+          </HStack>
+          <Box bg={"black"} width={"55%"} p={4} borderRadius={10} mr={10}>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum
+            </Text>
+          </Box>
+          <Flex>
+            <CardProd
+              name={"Dobok Canelado"}
+              text={"Lorem ipsum dolor sit amet."}
+              price={90.9}
+              image={"/img/dobok.png"}
             />
-          </Stack>
-          <Slider settings={settings}>
-            <SwiperSlide>
-              <Card
-                image={"/img/ataduraCarrosel.png"}
-                alt={"atadura"}
-                title={"atadura"}
-                description={
-                  "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
-                }
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card
-                image={"/img/canelaCarrossel.png"}
-                alt={"canela"}
-                title={"Caneleira"}
-                description={
-                  "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
-                }
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card
-                image={"/img/luvasCarrosel.png"}
-                alt={"luvas"}
-                title={"Luvas"}
-                description={
-                  "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
-                }
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card
-                image={"/img/sacoCarrosel.png"}
-                alt={"saco"}
-                title={"Saco Pancada"}
-                description={
-                  "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
-                }
-              />
-            </SwiperSlide>
-          </Slider>
-        </HStack>
-        <Box bg={"black"} width={"65%"} p={4} borderRadius={10} mr={10}>
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-            sunt in culpa qui officia deserunt mollit anim id est laborum
-          </Text>
-        </Box>
-        <Flex ml={"80%"}>
-          <CardProd
-            name={"Dobok Canelado"}
-            text={"Lorem ipsum dolor sit amet."}
-            price={90.9}
-            image={"/img/dobok.png"}
-          />
-          <CardProd
-            name={"Berimbau Completo"}
-            text={"Lorem ipsum dolor sit amet."}
-            price={90.9}
-            image={"/img/berimbau.webp"}
-          />
-          <CardProd
-            name={"Wing Chun de madeira"}
-            text={"Lorem ipsum dolor sit amet."}
-            price={90.9}
-            image={"/img/mudjong.webp"}
-          />
-          <CardProd
-            name={"Shinai de Bambu"}
-            text={"Lorem ipsum dolor sit amet."}
-            price={90.9}
-            image={"/img/shinai.jpg"}
-          />
-        </Flex>
-      </VStack>
+            <CardProd
+              name={"Berimbau Completo"}
+              text={"Lorem ipsum dolor sit amet."}
+              price={90.9}
+              image={"/img/berimbau.webp"}
+            />
+            <CardProd
+              name={"Wing Chun de madeira"}
+              text={"Lorem ipsum dolor sit amet."}
+              price={90.9}
+              image={"/img/mudjong.webp"}
+            />
+            <CardProd
+              name={"Shinai de Bambu"}
+              text={"Lorem ipsum dolor sit amet."}
+              price={90.9}
+              image={"/img/shinai.jpg"}
+            />
+          </Flex>
+        </VStack>
+      </HStack>
       <Footer />
     </Stack>
   );
