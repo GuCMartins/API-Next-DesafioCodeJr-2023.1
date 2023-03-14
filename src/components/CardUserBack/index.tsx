@@ -1,12 +1,6 @@
-import { SearchIcon, EditIcon, DeleteIcon } from "@chakra-ui/icons";
 import {
   Card,
   Stack,
-  Link,
-  Wrap,
-  WrapItem,
-  Text,
-  IconButton,
   Grid,
   GridItem,
   Center,

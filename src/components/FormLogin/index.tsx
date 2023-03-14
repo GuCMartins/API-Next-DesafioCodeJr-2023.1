@@ -5,7 +5,6 @@ import {
   Button,
   Box,
   Flex,
-  Heading,
   Link,
 } from "@chakra-ui/react";
 import React, { FormEvent } from "react";

@@ -1,5 +1,4 @@
 import { Flex, Image, VStack, Text, Heading } from "@chakra-ui/react";
-import { CardType } from "./types";
 
 interface CardProps {
     image: string;
