@@ -52,7 +52,8 @@ export function FormLogin() {
           </FormControl>
           <Link href="/gerenciamento">
             <Button
-              bg={"black"}
+              bg="black"
+              _hover={{ backgroundColor: "red.600", color: "white" }}
               variant="outline"
               type="submit"
               width="full"

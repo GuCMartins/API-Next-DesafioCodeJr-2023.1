@@ -8,6 +8,7 @@ import {
   GridItem,
   HStack,
   Button,
+  Box,
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import { Footer } from "../components/Footer";
@@ -75,6 +76,14 @@ export default function Funcionarios() {
             </GridItem>
           </Grid>
           <Divider orientation="horizontal" />
+
+          {/* width={"100%"}
+            maxHeight={"500px"}
+            overflow='auto'
+            sx={{ "&::-webkit-scrollbar": { width: "10px"}, 
+            "&::-webkit-scrollbar-track": { bg: "#1E1E1E"},
+            "&::-webkit-scrollbar-thumb": { bg: "#560B76", borderRadius: "5px" },
+            "&::-webkit-scrollbar-thumb:vertical":{ scrollbarMargin: "70px"}}} */}
           {funcionarios &&
             funcionarios.map((funcionario) => (
               <CardUserFront
@@ -87,15 +96,23 @@ export default function Funcionarios() {
               />
             ))}
           <HStack>
-          <Button bg="black" onClick={() => setCurrentPage(currentPage - 1)}>
+            <Button
+              bg="black"
+              _hover={{ backgroundColor: "red.600", color: "white" }}
+              onClick={() => setCurrentPage(currentPage - 1)}>
               <ArrowLeftIcon />
             </Button >
             {pageNumbers.map((number) => (
-              <Button bg="black" key={number} id={number}>
+              <Button bg="black"
+              _hover={{ backgroundColor: "red.600", color: "white" }} 
+               key={number} id={number}>
                 {currentPage}
               </Button>
             ))}
-            <Button bg="black" onClick={() => setCurrentPage(currentPage + 1)}>
+            <Button 
+              bg="black"
+              _hover={{ backgroundColor: "red.600", color: "white" }} 
+              onClick={() => setCurrentPage(currentPage + 1)}>
               <ArrowRightIcon />
             </Button>
           </HStack>

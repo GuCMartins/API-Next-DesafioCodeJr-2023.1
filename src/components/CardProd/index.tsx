@@ -21,7 +21,7 @@ interface CardProdProps {
 
 export function CardProd({ name, text, price, image }: CardProdProps) {
   return (
-    <Card maxW={"20%"} maxH={"25%"} bg={"#8A1B1B"} color="white" margin={"1%"}>
+    <Card maxW={"23%"} maxH={"25%"} bg={"#8A1B1B"} color="white" margin={"1%"}>
       <CardBody>
         <Center width={"150"} height={"150"}>
           <NextImage src={image} alt={text} width={"150"} height={"150"} />
@@ -38,8 +38,9 @@ export function CardProd({ name, text, price, image }: CardProdProps) {
       <CardFooter>
         <Button
           //   variantColor="teal"
+          bg="black"
+          _hover={{ backgroundColor: "red.600", color: "white" }}
           variant="outline"
-          type="submit"
           width="full"
           mt={4}
         >

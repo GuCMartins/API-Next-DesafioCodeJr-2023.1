@@ -28,9 +28,9 @@ export function CardUserBack({
   id,
 }: CardUserBackProps) {
   return (
-    <Card p={8} bg={"#8A1B1B"} m={"5%"}>
+    <Card p={8} bg={"#8A1B1B"} m={"2%"}>
       <Stack direction="column" color="white">
-        <Grid templateColumns="repeat(7, 1fr)" gap={5}>
+        <Grid templateColumns="repeat(7, 1fr)" gap={2}>
           <GridItem w="100%" h="10" pr={10}>
             <Center>{id}</Center>
           </GridItem>
@@ -47,7 +47,7 @@ export function CardUserBack({
             <Center>{cargo}</Center>
           </GridItem>
           <GridItem w="100%" h="10" pr={10}>
-            <Center>R$ {salario}</Center>
+            <Center>R${salario}</Center>
           </GridItem>
           <GridItem>
           <Stack direction="row" justify={"space-between"}>
